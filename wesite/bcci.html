@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCCI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: white;
+            /* background-color: #e4e2e2; */
+
+        }
+
+        .topbar {
+            display: flex;
+            height: 63px;
+            /* justify-content: flex-start; */
+            /* align-items: center; */
+            background-color: #0f235a;
+            align-items: center;
+            color: aliceblue;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            width: 30%;
+        }
+        .ipl {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 1%;
+            width: 70%;
+            
+            
+        }
+ 
+         .logo img {
+            margin-left: 6%;
+        }
+
+        .logo h2 {
+
+            margin-left: 5%;
+        }
+
+        /* #ser { 
+            margin-left: 35%;
+        } */
+
+        #bar {
+            
+            padding: 15px;
+        }
+
+        .ipl select {
+            background-color: #0f235a;
+            color: aliceblue;
+            padding: 10px;
+        }  
+
+
+
+        .topbar h2:hover {
+            border-bottom: 3px solid orange;
+        }
+
+        .manubar {
+
+            font-size: 20px;
+            padding: 10px;
+            background-color: rgb(169, 73, 47);
+        }
+
+        .manubar a {
+
+            color: aliceblue;
+            text-decoration: none;
+            margin: 10px;
+
+            /* background-color: rgb(220, 162, 54); */
+
+        }
+
+        .btbar {
+            margin: 0.8%;
+            background-color: aliceblue;
+
+        }
+
+        .btbar a {
+            color: rgb(56, 136, 194);
+            font-size: 18px;
+            margin: 15px;
+
+        }
+
+
+
+        .bgimg img {
+            width: 100%;
+            filter: contrast(1.2);
+            /* opacity: 0.8; */
+
+        }
+
+        .bgimg {
+            height: 75vh;
+            width: 95%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        pre {
+            color: rgb(204, 63, 63);
+            font-weight: 900;
+        }
+
+        .team {
+            position: absolute;
+            top: 70vh;
+            left: 5%;
+            border-left: 4px solid red;
+            padding-left: 15px;
+            color: white;
+            line-height: 40px;
+            font-size: 23px;
+            text-shadow: 15px;
+
+        }
+
+        .team button {
+            background-color: red;
+            border: 0px solid rgb(124, 14, 14);
+            padding: 2px 6px;
+            color: aliceblue;
+            border-radius: 5px;
+
+        }
+
+        .timetable {
+            /* border: 2px solid red; */
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 20px;
+            background-color: aliceblue;
+        }
+
+        .match {
+            display: flex;
+            font-size: 21px;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0px;
+            /* justify-content: space-around; */
+        }
+
+        .match :nth-child(2) {
+            margin-left: 15%;
+            margin-right: 2%;
+        }
+
+        .match :nth-child(4) {
+            margin-left: 50%;
+        }
+
+        .against {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-between;
+            text-align: center;
+
+            
+
+
+        }
+
+
+
+        div[class*=vs] {
+            /* background-color: #0f235a; */
+            background-image: url(https://www.bcci.tv/img/latest-Video-BG.png);
+            color: aliceblue;
+            line-height: 35px;
+            padding: 5px 0px;
+            /* border-radius: 10px; */
+
+
+        }
+
+        .subvsimg {
+            border-top: 1px solid grey;
+            border-bottom: 1px solid grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .subvsimg img:nth-child(1),
+        .subvsimg img:nth-child(3) {
+            width: 20%;
+        }
+
+        .video {
+            background-image: url(https://www.bcci.tv/img/latest-Video-BG.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 99%;
+            height: 60vh;
+            margin: 0 auto;
+            margin-top: 30px;
+            border: 1px solid aliceblue;
+        }
+
+        .latest {
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+            color: aliceblue;
+            font-size: 15px;
+            margin-top: 6%;
+            margin: 3.5% 2%;
+        }
+
+        .latest a {
+            margin-left: 5%;
+            color: aliceblue;
+            font-size: 20px;
+        }
+        .latest a:hover {
+            border-bottom: 3px solid orange;
+            
+        }
+
+        .latest :nth-child(2) {
+            margin-left: 15%;
+
+        }
+
+        .latest :nth-child(7) {
+            margin-left: 20%;
+
+        }
+
+        .videobox {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        .videobox1 img {
+            width: 100%;
+            height: 40vh;
+            border-radius: 10px;
+
+        }
+
+        .videobox1 {
+            /* border: 2px solid red; */
+            border-radius: 5px;
+            width: 22%;
+            height: 55vh;
+            border-radius: 10px;
+            background-color: #0d1b42;
+            font-size: 20px;
+            line-height: 25px;
+            color: aliceblue;
+
+        }
+
+        .trophy{
+            
+            background-image: url(https://www.bcci.tv/img/latest-Video-BG.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 99%;
+            height: 55vh;
+            margin: 0 auto;
+            margin-top: 10%;
+            border: 1px solid aliceblue;
+        }
+        .honours{
+            padding: 4% 0%;
+            margin-left: 3%;
+            font-size: 25px;
+            color: aliceblue;
+        }
+
+        .wins {
+            display: flex;
+            justify-content: space-around;
+            /* align-items: center; */
+        
+
+        }
+        .wins>.wins1{
+            
+            text-align: center;
+            line-height: 60px;
+        
+
+        
+        }
+
+
+        .wins1 img {
+            /* width: 70%; */
+        
+            height: 50%;
+            border-radius: 10px;
+            
+        }
+
+        .wins1 h1{
+            opacity: 0.2;
+        }
+
+        .wins1{
+            /* border: 2px solid red; */
+            border-radius: 5px;
+            width: 18%;
+            height: 40vh;
+            border-radius: 10px;
+            background-color:  #0f235a;
+            font-size: 20px;
+            line-height: 25px;
+            color: aliceblue;
+            padding-inline: 10px;
+        }
+
+
+                                                                                                  /* Footer start */
+
+            footer{
+                background-image: url(https://www.bcci.tv/img/latest-Video-BG.png);
+                background-repeat: no-repeat;
+                /* background-position: center; */
+                background-size: cover;
+                filter: drop-shadow(5px);
+                margin-top: 20vh;
+                color: aliceblue;
+            }    
+            .mainlogo img{
+                width: 20%;
+            }     
+            
+            .footlogo{
+                padding: 4% 0%;
+                width: 94%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .details{
+                display: flex;
+                justify-content: space-around;
+                line-height: 35px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="logo">
+            <img src="../wesite-clone/img/bcci-logo.svg" alt="" height="50px">
+            <h2>International</h2>
+            <h2>Domestic</h2>
+        </div>
+        <div class="ipl">
+            <i id="ser" class="fa-solid fa-magnifying-glass" style="border: 1px solid white; padding: 22px;"></i>
+            <img src="../wesite-clone/img/wcw.png" alt="" style="border: 1px solid white; padding: 16px;">
+            <img src="../wesite-clone/img/ipl-logo.svg" alt="" style="border: 1px solid white; padding: 16px;">
+            <img src="../wesite-clone/img/wpl-logo.svg" alt="" style="border: 1px solid white; padding: 16px;">
+            <i id="bar" class="fa-solid fa-bars"></i>
+            <select name="" id="">
+                <option value="">ENG</option>
+                <option value="">HINDI</option>
+            </select>
+        </div>
+    </div>
+    <div class="manubar">
+        <a href="#">MEN</a>
+        <a href="#">WOMEN</a>
+        <a href="#">Video</a>
+        <a href="#">Fixtures</a>
+        <a href="#">Results</a>
+        <a href="#">News</a>
+        <a href="#">Players</a>
+        <a href="#">Rankings</a>
+        <a href="#">Series and tournaments</a>
+    </div>
+    <div class="btbar">
+        <a href="#" style="background-color: #a0c7ff; padding: 2px 10px; border-radius: 10px;">QuickLinks</a>
+        <a href="#">Domestic 2023-24 SCHEDULE></a>
+        <a href="#">INTERNATIONAL RESULTS</a>
+        <a href="#">BCCI DOCUMENTATION></a>
+        <a href="#">TENDER AND REP</a>
+        <a href="#">JOBS</a>
+    </div>
+    <div class="bgimg">
+
+        <img src="https://cf-images.eu-west-1.prod.boltdns.net/v1/static/3588749423001/ac08a6d9-2bc1-4ae6-9ea4-c220707cb230/6e7fe8dd-3f33-42d8-a849-608e00a6faa7/1280x720/match/image.jpg"
+            alt="">
+    </div>
+    <div class="team">
+
+        <button>NEWS</button>
+        <h2>india's squad for t20i
+            series against...
+        </h2>
+        <p>20th Nov,2023</p>
+        <pre> ____ ____ ____ ____</pre>
+
+    </div>
+    <div class="timetable">
+
+        <div class="match">
+            <h1>Matches</h1>
+            <a href="#">Fixtures</a>
+            <p>Results</p>
+            <!-- <p>SEE ALL ></p> -->
+        </div>
+        <div class="against">
+
+            <div class="vs1">
+                <div class="subvs">
+                    <p>1st T20i</p>
+                    <p>INDIA VS AUSTRALIA 2023-24</p>
+                </div>
+
+                <div class="subvsimg">
+                    <img src="https://scores.bcci.tv/matchcentre/teamlogos/india.png" alt="">
+                    <img src="https://scores.bcci.tv/matchcentre/homewidgetv3/images/vs.png" alt="">
+                    <img src="https://scores.bcci.tv/matchcentre/teamlogos/aus.png?v=6" alt="">
+                </div>
+                <div class="subvsfoot">
+                    <p>22 November,2023|7:00 PM IST</p>
+                    <p>Narendra Modi Stadium,Ahemdabad </p>
+                </div>
+            </div>
+
+            <div class="vs2">
+                <div class="subvs">
+                    <p>2st T20i</p>
+                    <p>INDIA VS AUSTRALIA 2023-24</p>
+
+                </div>
+                <div class="subvsimg">
+                    <img src="https://scores.bcci.tv/matchcentre/teamlogos/india.png" alt="">
+                    <img src="https://scores.bcci.tv/matchcentre/homewidgetv3/images/vs.png" alt="">
+                    <img src="https://scores.bcci.tv/matchcentre/teamlogos/aus.png?v=6" alt="">
+                </div>
+                <div class="subvsfoot">
+                    <p>26 November,2023|7:00 PM IST</p>
+                    <p>Vankhede Stadium,Mumbai </p>
+                </div>
+            </div>
+
+
+
+            <div class="vs3">
+                <div class="subvs">
+                    <p>3st T20i</p>
+                    <p>INDIA VS AUSTRALIA 2023-24</p>
+
+                </div>
+                <div class="subvsimg">
+                    <img src="https://scores.bcci.tv/matchcentre/teamlogos/india.png" alt="">
+                    <img src="https://scores.bcci.tv/matchcentre/homewidgetv3/images/vs.png" alt="">
+                    <img src="https://scores.bcci.tv/matchcentre/teamlogos/aus.png?v=6" alt="">
+                </div>
+                <div class="subvsfoot">
+                    <p>29 November,2023|7:00 PM IST</p>
+                    <p>Iden Garden Stadium,Kolkata</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="video">
+        <div class="latest">
+            <h1>Videos</h1>
+            <a href="#">Latest</a>
+            <a href="#">Highlights</a>
+            <a href="#">Featured</a>
+            <a href="#">Interviews</a>
+            <a href="#">Press Conferences</a>
+            <!-- <a href="#">SEE ALL >></a> -->
+
+        </div>
+        <div class="videobox">
+            <div class="videobox1">
+                <img src="https://cf-images.eu-west-1.prod.boltdns.net/v1/static/3588749423001/b002fab0-21f9-4c39-b003-5aabf756e00a/ec193568-f91a-4054-b5d0-78aabc237703/1280x720/match/image.jpg"
+                    alt="">
+                <p>25 Nov, 2023</p><br>
+                <p>Tilak Verma Talking About Surya Kumar Yadav</p>
+
+            </div>
+            <div class="videobox1">
+                <img src="https://cf-images.eu-west-1.prod.boltdns.net/v1/static/3588749423001/81fda804-1eed-473f-b1ae-2dfb76c50aae/65bec530-482e-4819-bde5-22416a1427d4/1280x720/match/image.jpg"
+                    alt="">
+                <p>23 Nov, 2023</p><br>
+                <p>Incredibel ining by Surya kumar yadav</p>
+
+            </div>
+            <div class="videobox1">
+                <img src="https://cf-images.eu-west-1.prod.boltdns.net/v1/static/3588749423001/3b1c22fa-c076-4ac9-94bd-71a2605fef9a/72db702d-3024-4971-af5b-898bbe3e2fe8/1280x720/match/image.jpg"
+                    alt="">
+                <p>22 Nov, 2023</p><br>
+                <p>Rinku recaps india's last-ball finish in vizag</p>
+
+            </div>
+            <div class="videobox1">
+                <img src="https://cf-images.eu-west-1.prod.boltdns.net/v1/static/3588749423001/992d4cce-68e2-42ef-86d1-025cfaec4dff/bf199d79-6396-43a0-be31-b5c5aa6381ac/1280x720/match/image.jpg"
+                    alt="">
+                <p>20 Nov, 2023</p><br>
+                <p>Incredibel ining by Ishan kishan</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="trophy">
+        <div class="honours">
+            <h1>Honours</h1>
+        </div>
+        <div class="wins">
+            <div class="wins1">
+                <h1>1983</h1>
+                <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/images/Trophy/1983.png" alt="">
+                <p>Icc World Cup</p>
+            </div>
+            <div class="wins1">
+                <h1>2000</h1>
+                <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/images/Trophy/Under_19.png" alt="">
+                <p>Icc U-19 World Cup</p>
+            </div>
+            <div class="wins1">
+                <h1>2007</h1>
+                <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/images/Trophy/2007.png" alt="">
+                <p>Icc T-20 World Cup</p>
+            </div>
+            <div class="wins1">
+                <h1>2011</h1>
+                <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/images/Trophy/2011.png" alt="">
+                <p>Icc World Cup</p>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <footer>
+        <div class="footlogo">
+            <div class="mainlogo">
+                
+                <img src="../wesite-clone/img/bcci-logo.svg" alt="" >
+            </div>
+            <div class="sublogo">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-threads"></i>
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="contact">
+                <h1>Contact Us</h1>
+                <p>4th Floor, Cricket Centre</p>
+                <p>Wankhede Stadium ‘D’ Road,</p>
+                <p>Churchgate Mumbai - 400020, India.</p>
+                <p>E-mail: office@bcci.tv</p>
+                <p>T :+91 22 - 2289 8800</p>
+
+            </div>
+            <div class="match2">
+                <h1>Matches</h1>
+                <p>Domestic</p>
+                <p>International</p>
+
+            </div>
+            <div class="News">
+                <h1>News</h1>
+                <p>Latest</p>
+                <p>Press Releases</p>
+                <p>Features and Interviews</p>
+                <p>BCCI News</p>
+
+            </div>
+            <div class="more">
+                <h1>More</h1>
+                <p>Ipl</p>
+                <p>Wpl</p>
+                <p>Venues</p>
+                <p>Galleries</p>
+                <p>Jobs</p>
+                <p>Tender</p>
+
+            </div>
+            <div class="About">
+                <h1>About</h1>
+                <p>History</p>
+                <p>Anti Corruption</p>
+                <p>Anti Racism</p>
+                <p>Anti Doping</p>
+                <p>TUE Application form</p>
+                <p>Playing Conditions</p>
+                <p>Annual Reports</p>
+                <p>MCC Laws of Cricket</p>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

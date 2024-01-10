@@ -1,0 +1,234 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body {
+    background-color: rgb(196, 196, 196);
+}
+
+header {
+    background-color: #16162a;
+}
+
+.nav1 {
+    display: flex;
+    /* width: 98%; */
+    margin: 0px auto;
+    padding: 12px;
+    align-items: center;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 17px;
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+}
+
+.nav1 h1 {
+    border-bottom: 6px solid rgb(211, 166, 5);
+    border-radius: 50%;
+    font-size: 30px;
+
+}
+
+
+
+.subnav .loca {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+
+.loca i:nth-child(1) {
+    margin-left: 30px;
+}
+
+
+.subnav select {
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.subnav input {
+    width: 500px;
+    height: 40px;
+    margin-left: 0;
+    border: none;
+
+}
+
+.fa-magnifying-glass {
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(203, 152, 0);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.nav2 {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+    background-color: #232F3E;
+    padding: 10px;
+}
+
+.nav2 p:hover {
+    border: 2px solid white;
+}
+
+.nav2 h3:hover {
+    border: 2px solid white;
+}
+
+.subnav2 {
+    margin-left: 8px;
+}
+
+.main img {
+    width: 100%;
+
+}
+
+/* .container {
+    position: relative;
+    bottom: 45vh;
+} */
+
+.container1 {
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 2px solid red;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.container2 {
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 2px solid red;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+div[class*=box] {
+    color: black;
+    background-color: aliceblue;
+    padding: 10px;
+    width: 30%;
+    height: 290px;
+    margin-bottom: 10px;
+
+    font-size: 22px;
+
+}
+
+div[class*=box] a {
+    text-decoration: none;
+
+
+}
+
+div[class*=box] .img {
+    width: 100%;
+    /* height: 150px; */
+    display: flex;
+    justify-content: space-around;
+    line-height: 2px;
+    margin: 10px auto;
+
+
+}
+
+.Deals,.clothimg,.Electronicsimg{
+    /* width: 91.8%; */
+    height: 38vh;
+    margin-top: 10vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    
+    
+}
+
+.today, .cloth ,.Electronics{
+    font-size: 25px;
+    width: 91.8%;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: rgb(237, 237, 237);
+    
+}
+
+.deals h3{
+    display: flex;
+    align-items: flex-end;
+}
+
+div[class*=dealsimg] img{
+    width: 100%; 
+    background-color: bisque;
+}
+
+.sign{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 160px;
+    text-align: center;
+    line-height: 40px;
+    background-color: white;
+    
+}
+
+.sign button{
+    border: none;
+    padding: 5px 100px;
+    border-radius: 5px;
+    background-color: orange;
+
+}
+.back{
+    background-color: #364b66;
+    /* border: 2px solid red; */
+    text-align: center;
+    padding: 20px 0;
+    color: aliceblue;
+    font-size: 22px;
+}
+footer{
+    background-color: #232F3E;
+    
+}
+.footer1{
+    width: 70%;
+    margin: 0 auto;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.container{
+    width: 100%;
+    position: absolute;
+    top: 55vh;
+}
