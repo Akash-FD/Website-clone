@@ -141,6 +141,9 @@
             margin-right: 10px;
 
         }
+        .information button i ::before{
+            transform: rotate(90deg);
+        }
 
         @media (max-width:1030px) {
 
@@ -245,18 +248,17 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="../wesite-clone/img/netflix logo.png" alt="Netflix-logo">
+                <img src="../wesite/img/netflix logo.png" alt="Netflix-logo">
             </div>
             <div class="btn">
                 <select name="" id="">
                     <option value="">English</option>
                     <option value="">Hindi</option>
                 </select>
-                <button id="darkmode">SIGN IN</button>
-                <select name="" id="">
-                    <option value="" id="darkmode">Dark mode</option>
-                    <option value="" id="lightmode">light mode</option>
-                </select>
+                <button>SIGN IN</button>
+                <button id="Darkmode">Dark mode</button>
+                <button id="Lightmode">Light mode</button>
+              
                
             </div>
         </nav>
@@ -282,14 +284,14 @@
         </div>
 
         <div class="tv">
-            <img src="../wesite-clone/img/tv.png" alt="">
+            <img src="../wesite/img/tv.png" alt="">
         </div>
 
     </section>
 
     <section class="section2">
         <div class="mobile">
-            <img src="../wesite-clone/img/mobile-netflix.jpg" alt="">
+            <img src="../wesite/img/mobile-netflix.jpg" alt="">
         </div>
 
         <div class="download">
@@ -309,12 +311,12 @@
         </div>
 
         <div class="moniter">
-            <img src="../wesite-clone/img/device-pile-in.png" alt="">
+            <img src="../wesite/img/device-pile-in.png" alt="">
         </div>
     </section>
     <section class="section4">
         <div class="child">
-            <img src="../wesite-clone/img/children.png" alt="">
+            <img src="../wesite/img/children.png" alt="">
         </div>
         <div class="kid">
             <h2>Create Profiles For Kids</h2><br>
@@ -364,7 +366,7 @@
 
         </footer>
 
-        <script src="../JQurey/JQ/JQuery.js"></script>
+        <script src="../../JQurey/JQ/JQuery.js"></script>
 
 
         <script>
@@ -395,7 +397,12 @@
                     $(".p6").slideToggle()
                     $("#i6").css("transform", "rotate(45deg)")
                 })
-                $("#darkmode").click(function () {
+                $("#Darkmode").click(function () {
+                    // $(".p6").slideToggle()
+                    $("*").css({opacity: 1})
+                    
+                })
+                $("#Lightmode").click(function () {
                     // $(".p6").slideToggle()
                     $("*").css({opacity: 0.9})
                     
