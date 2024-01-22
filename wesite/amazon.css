@@ -8,6 +8,7 @@
 
 body {
     background-color: rgb(196, 196, 196);
+    position: relative;
 }
 
 header {
@@ -59,6 +60,7 @@ header {
 
 .subnav input {
     width: 500px;
+
     height: 40px;
     margin-left: 0;
     border: none;
@@ -156,7 +158,9 @@ div[class*=box] .img {
 
 }
 
-.Deals,.clothimg,.Electronicsimg{
+.Deals,
+.clothimg,
+.Electronicsimg {
     /* width: 91.8%; */
     height: 38vh;
     margin-top: 10vh;
@@ -166,47 +170,51 @@ div[class*=box] .img {
     justify-content: space-around;
     align-items: center;
     font-size: 18px;
-    
-    
+
+
 }
 
-.today, .cloth ,.Electronics{
+.today,
+.cloth,
+.Electronics {
     font-size: 25px;
     width: 91.8%;
     padding: 20px;
     margin: 0 auto;
     background-color: rgb(237, 237, 237);
-    
+
 }
 
-.deals h3{
+.deals h3 {
     display: flex;
     align-items: flex-end;
 }
 
-div[class*=dealsimg] img{
-    width: 100%; 
+div[class*=dealsimg] img {
+    width: 90%;
+    height: auto;
     background-color: bisque;
 }
 
-.sign{
+.sign {
     /* border: 2px solid red; */
     width: 100%;
     height: 160px;
     text-align: center;
     line-height: 40px;
     background-color: white;
-    
+
 }
 
-.sign button{
+.sign button {
     border: none;
     padding: 5px 100px;
     border-radius: 5px;
     background-color: orange;
 
 }
-.back{
+
+.back {
     background-color: #364b66;
     /* border: 2px solid red; */
     text-align: center;
@@ -214,11 +222,13 @@ div[class*=dealsimg] img{
     color: aliceblue;
     font-size: 22px;
 }
-footer{
+
+footer {
     background-color: #232F3E;
-    
+
 }
-.footer1{
+
+.footer1 {
     width: 70%;
     margin: 0 auto;
     color: aliceblue;
@@ -227,8 +237,228 @@ footer{
     padding: 25px;
 }
 
-.container{
+.container {
     width: 100%;
     position: absolute;
     top: 55vh;
+}
+
+
+/* media quary start hear */
+
+
+
+@media (max-width: 1250px) {
+
+    .span2{
+        display: none;
+    }
+    i:nth-last-child(2){
+        display: none;
+    }
+
+    .subnav2 h3 {
+        display: none;
+    }
+
+    div[class*=box] img {
+        width: 40%;
+
+    }
+
+    .Electronicsimg img {
+        width: 100px;
+        height: 140px;
+    }
+
+    .clothimg img {
+        width: 170px;
+        height: 180px;
+
+    }
+
+    .loca input {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1125px) {
+    .loca input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .loca :nth-last-child(3) {
+        display: none;
+    }
+
+    .loca :nth-last-child(4) {
+        display: none;
+    }
+
+    .loca :nth-last-child(5) {
+        display: none;
+    }
+
+    .loca :nth-last-child(6) {
+        display: none;
+    }
+
+    .container h3 {
+        font-size: 17px;
+
+    }
+
+    .container a {
+        font-size: 17px;
+
+    }
+
+    div[class*=box] {
+        height: 220px;
+
+    }
+
+    .container {
+        width: 100%;
+        position: absolute;
+        top: 45vh;
+    }
+
+
+}
+
+@media (max-width: 880px) {
+
+    .container {
+        width: 100%;
+        position: absolute;
+        top: 40vh;
+    }
+
+    .clothimg img {
+        width: 120px;
+        height: 150px;
+
+    }
+
+    .clothimg {
+        height: 200px;
+    }
+
+    .dealsimg img {
+        width: 130px;
+        height: 120px;
+
+    }
+
+    .nav2 :nth-last-child(2) {
+        display: none;
+    }
+
+    .nav2 :nth-last-child(3) {
+        display: none;
+    }
+
+    .nav2 :nth-last-child(4) {
+        display: none;
+    }
+
+    .nav2 :nth-last-child(5) {
+        display: none;
+    }
+
+    .footer1 {
+        font-size: 10px;
+    }
+
+
+}
+
+@media (max-width: 660px) {
+
+    .nav2 :nth-last-child(6) {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        position: absolute;
+        top: 35vh;
+    }
+
+    .container h3 {
+        font-size: 12px;
+
+    }
+
+    .container a {
+        font-size: 12px;
+
+    }
+    
+
+    .clothimg img {
+        width: 90px;
+        height: 115px;
+
+    }
+
+    .loca:nth-child(1) {
+        font-size: 15px;
+
+    }
+
+    .nav1 h1 {
+        font-size: 1.2rem;
+        border-bottom: 2px solid yellow;
+    }
+
+    .span1 {
+        font-size: 1rem;
+    }
+
+    .loca input {
+        width: 110px;
+    }
+    
+
+
+
+}
+
+@media (max-width: 500px) {
+
+    div[class*=box] {
+        height: 170px;
+
+    }
+
+    .clothimg img {
+        width: 70px;
+        height: 100px;
+
+    }
+
+    .Deals {
+        height: 150px;
+    }
+
+    .Deals img {
+        width: 110px;
+        height: 100px;
+    }
+
+    .Electronicsimg img {
+        width: 80px;
+        height: 70px;
+    }
+
+    .Electronicsimg,
+    .clothimg {
+        height: 130px;
+    }
+
 }
