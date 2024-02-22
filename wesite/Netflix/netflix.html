@@ -67,7 +67,7 @@
         }
 
         .maintext p {
-            font-size: 18px;
+            font-size: 17px;
             color: rgb(167, 167, 167);
         }
 
@@ -140,6 +140,9 @@
             float: right;
             margin-right: 10px;
 
+        }
+        p{
+            display: block;
         }
     
 
@@ -246,7 +249,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="../wesite/img/netflix logo.png" alt="Netflix-logo">
+                <img src="../img/netflix logo.png" alt="Netflix-logo">
             </div>
             <div class="btn">
                 <select name="" id="">
@@ -282,14 +285,14 @@
         </div>
 
         <div class="tv">
-            <img src="../wesite/img/tv.png" alt="">
+            <img src="../img/tv.png" alt="">
         </div>
 
     </section>
 
     <section class="section2">
         <div class="mobile">
-            <img src="../wesite/img/mobile-netflix.jpg" alt="">
+            <img src="../img/mobile-netflix.jpg" alt="">
         </div>
 
         <div class="download">
@@ -309,12 +312,12 @@
         </div>
 
         <div class="moniter">
-            <img src="../wesite/img/device-pile-in.png" alt="">
+            <img src="../img/device-pile-in.png" alt="">
         </div>
     </section>
     <section class="section4">
         <div class="child">
-            <img src="../wesite/img/children.png" alt="">
+            <img src="../img/children.png" alt="">
         </div>
         <div class="kid">
             <h2>Create Profiles For Kids</h2><br>
@@ -364,12 +367,13 @@
 
         </footer>
 
-        <script src="../../JQurey/JQ/JQuery.js"></script>
+        
+        <script src="../../../JQurey/JQ/JQuery.js"></script>
 
 
         <script>
             $(document).ready(function () {
-                $("p").hide()
+                $(".information p").hide()
 
                 $("#btn1").click(function () {
                     $(".p1").slideToggle()

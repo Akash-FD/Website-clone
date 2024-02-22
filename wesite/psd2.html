@@ -1,0 +1,640 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>figma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            /* outline: 2px solid green; */
+        }
+
+        body{
+            /* background-color: gainsboro; */
+            background-color: white;
+        }
+        
+
+    
+
+        nav {
+
+            display: flex;
+            justify-content: space-around;
+            /* background-color: darkgray; */
+            align-items: center;
+            font-size: 20px;
+            height: 60px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav li {
+            margin-inline: 10px;
+        }
+
+        nav li a {
+            color: black;
+            font-size: 20px;
+        }
+
+        nav button {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgb(132, 117, 241);
+            color: aliceblue;
+            border: none;
+
+        }
+        .nav2 ul{
+            display: flex;
+            width: 150%;
+            flex-direction: column;
+            margin-top: 150px;
+            background-color: salmon;
+            color: aliceblue;
+        
+        }
+        
+        .nav2 li{
+            margin:9px
+        }
+            
+
+        .get {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .account {
+            width: 70%;
+            text-align: center;
+            margin: 5% 0%;
+            line-height: 60px;
+            font-size: 20px;
+
+
+        }
+
+        .account h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        .account p{
+            font-size: 18px;
+        }
+
+        .account button {
+            background-color: rgb(168, 97, 235);
+            color: aliceblue;
+        }
+
+        .account button,
+        input {
+            padding: 10px;
+        }
+
+        .account :nth-child(1) {
+            background-color: greenyellow;
+            width: 200px;
+            margin: 0 auto;
+            border-radius: 250px;
+            
+
+        }
+        .grap1 img{
+            width: 60%;
+        }
+
+        .grap1 {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+
+        }
+
+        .overview h1 {
+            width: 90%;
+            margin-top: 20px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .facebook img {
+            width: 7%;
+
+        }
+
+        .facebook {
+            width: 90%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .time {
+            /* background-color:slategray; */
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            padding: 5% 0%;
+            justify-content: space-around;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            width: 500px;
+
+        }
+        .timeline img{
+            width: 100%;
+        }
+
+        .surveydiv {
+            margin-left: 5px;
+            margin-bottom: 20px;
+            line-height: 30px;
+        }
+
+        .make {
+            width: 90%;
+            margin: 5% auto;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+
+        }
+
+        .make h1 {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 30px;
+
+        }
+
+        .make img {
+            width: 30%;
+            border-radius: 50%;
+
+        }
+
+        .oipmain {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .oip {
+            width: 25%;
+        }
+
+        .work {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+            width: 90%;
+            margin: 0 auto;
+            align-items: center;
+
+        }
+
+        .grap2 {
+            width: 50%;
+        }
+
+        .worked {
+            width: 35%;
+            line-height: 40px;
+            font-size: 30px;
+            text-align: left;
+        }
+
+        .worked h1 {
+            margin: 20px 0px;
+        }
+
+        .worked button {
+            background-color: rgb(133, 133, 246);
+            padding: 7px 20px;
+            color: aliceblue;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .customer {
+            /* border: 2px solid red; */
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 5%;
+
+        }
+
+        .custom {
+            width: 45%;
+            margin: 0 auto;
+            font-size: 25px;
+            text-align: center;
+
+        }
+
+        .custom h1 {
+            font-size: 40px;
+
+        }
+
+        .custom p {
+            margin: 30px 0px;
+            font-size: 17px;
+        }
+
+        .person {
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        .person img {
+            width: 40%;
+        }
+
+        .emp {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            border-radius: 10px;
+            background-color: rgb(124, 63, 255);
+            height: 200px;
+            margin: 0 auto;
+            margin-top: 50px;
+            color: aliceblue;
+        }
+
+
+        .emp img {
+            width: 20%;
+            border-radius: 10px;
+        }
+        .flex img {
+            width: 20%;
+        }
+        .flex{
+           
+            display: flex;
+            justify-content: space-between;
+            padding: 7% 0;
+            background-color: rgb(27, 27, 65);
+            color: aliceblue;
+            margin-top: 40px;
+        }
+        .flex>div{
+            margin: 0 100px;
+            font-size: 20px;
+        }
+
+        @media (min-width:752px) {
+            .nav2{
+                display: none;
+            }
+            
+        }
+        
+       
+        @media (max-width:752px) {
+            .nav1{
+                display: none;
+            }
+
+            .account>h1{
+                font-size: 2.1rem;
+            }
+            .account{
+                line-height: 40px;
+            }
+
+            .grap1 img{
+                width: 380px;
+            }
+
+            .timeline img{
+                width: 100%;
+            
+            }
+            .time{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .timeline{
+                padding-bottom: 30px;
+            }
+
+            .oipmain{
+                display: flex;
+                flex-direction: column;
+            }
+            .oip{
+                width: 70%;
+                text-align: center;
+                padding: 4% 0;
+                font-size: 1.2rem;
+            }
+
+            .grap2 {
+                width: 400px;
+            }
+
+            .work{
+                display: flex;
+                flex-direction: column ;
+            }
+            .worked {
+                font-size: 1.5rem;
+                width: 80%;
+                text-align: center;
+            }
+
+            .custom{
+                width: 80%;
+            }
+
+            .person{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .flex{
+                display: flex;
+                flex-direction: column;
+                
+            }
+
+            @media (max-width:400px) {
+
+                .grap1 img{
+                width: 310px;
+            }
+                .grap2 {
+                width: 320px;
+            }
+
+            }
+          
+
+
+
+            
+        }
+ 
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav1">
+            <h1>team.flow</h1>
+            <ul>
+                <li><a href="#">How it's work</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">prising</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+            <hgroup>
+                <a href="#">Log in</a>
+                <button>Get Started free</button>
+            </hgroup>
+        </nav>
+        <nav class="nav2">
+            <h2>team.flow</h2>
+            <details>
+                <summary>≡</summary>
+                <ul>
+                    <li>How it's work</li>
+                    <li>Product</li>
+                    <li>prising</li>
+                    <li>Resources</li>
+                </ul>
+
+            </details>
+        </nav>
+
+        <div class="get">
+            <div class="account">
+
+                <p>get account os $59 </p>
+                <h1>manage the team everyone wants to be on</h1>
+
+                <p>simple platform that lets you master you great managers do best, as develop tust , collaborate and
+                    drive
+                    team
+                    performance</p>
+                <input type="email" name="email" id="email" placeholder="name@yourcompany.com">
+                <button>Try it free</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="overview">
+
+            <div class="grap1">
+
+                <img src="../../Assignment/Module-2-CSS/image/graph1.png" alt="graph" width="100%">
+
+
+            </div>
+            <h1>TRUSTED BY OVER 10.000+ WORLD'S BEST TEAMS</h1>
+            <div class="facebook">
+
+                <img src="../../Assignment/Module-2-CSS/image/google.png" alt="google">
+
+                <img src="../../Assignment/Module-2-CSS/image/airbnb.png" alt="airbnb">
+
+                <img src="../../Assignment/Module-2-CSS/image/face.png" alt="facebook">
+
+                <img src="../../Assignment/Module-2-CSS/image/hubsport.png" alt="hub">
+
+            </div>
+
+        </section>
+
+        <section class="time">
+            <div class="timeline">
+
+                <img src="../../Assignment/Module-2-CSS/image/ttimeline.png" alt="" >
+            </div>
+
+
+            <div class="survey">
+
+                <div class="surveydiv">
+                    <h2>survey your team</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, saepe?</p>
+                </div>
+                <hr>
+                <div class="surveydiv">
+                    <h2>resolve issues quickly</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, saepe?</p>
+                </div>
+                <hr>
+                <div class="surveydiv">
+                    <h2>plan on your 1-on-1s</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, saepe?</p>
+                </div>
+                <hr>
+                <div class="surveydiv">
+                    <h2>track your progress</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, saepe?</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="make">
+            <div class="makeh1">
+
+                <h1>make your work easier</h1>
+            </div>
+            <div class="oipmain">
+
+                <div class="oip">
+
+                    <img src="../../Assignment/Module-2-CSS/image/OIP.jpg" alt="">
+                    <h3>team survey and reports</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat recusandae quis voluptatum totam! Doloribus, nisi.</p>
+                </div>
+                <div class="oip">
+
+                    <img src="../../Assignment/Module-2-CSS/image/OIP (1).jpg" alt="">
+                    <h3>collabaration 1:1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate alias aperiam consequatur nemo, explicabo </p>
+                </div>
+                <div class="oip">
+
+                    <img src="../../Assignment/Module-2-CSS/image/lc.jpg" alt="">
+                    <h3>learning center</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nobis ipsa inventore odit corrupti accusamus explicabo .</p>
+                </div>
+
+            </div>
+            <!-- <a href="#">View More Benefits</a> -->
+        </section>
+
+
+        <section class="work">
+            <div class="grap2">
+
+                <img src="../../Assignment/Module-2-CSS/image/graph2.png" alt="" width="100%">
+
+            </div>
+
+            <div class="worked">
+
+                <h1>we work how you work everyday</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolores optio odio.</p>
+                <button>get started free</button>
+            </div>
+
+        </section>
+
+
+        <section class="customer">
+            <div class="custom">
+
+                <h1>why customers working with us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut accusantium dolores magni animi velit
+                    suscipit?</p>
+            </div>
+            <div class="person">
+                <div class="person1">
+
+
+                    <img src="../../Assignment/Module-2-CSS/image/person.jpg" alt="">
+                    <b style="display: block;">PERSON</b>
+                    <p>cs at google</p>
+                </div>
+                <div class="person1">
+
+
+                    <img src="../../Assignment/Module-2-CSS/image/person.jpg" alt="">
+                    <b style="display: block;">PERSON</b>
+                    <p>Devloper</p>
+                </div>
+                <div class="person1">
+
+
+                    <img src="../../Assignment/Module-2-CSS/image/person.jpg" alt="">
+                    <b style="display: block;">PERSON</b>
+                    <p>Designer</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="emp">
+            <h1>84% of employees who use trust their direct manager</h1>
+            <img src="../../Assignment/Module-2-CSS/image/googlewhite.jpeg" alt="">
+            <img src="../../Assignment/Module-2-CSS/image/apple.black.png" alt="">
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="flex">
+
+
+            <div>
+                <h2>Company</h2>
+                <p>About Us</p>
+                <p>Blog</p>
+                <p>Careers</p>
+                <p>Contact Us</p>
+            </div>
+            <div >
+                <h2>Support</h2>
+                <p>Help Center</p>
+                <p>Safety Center</p>
+                <p>Community</p>
+
+            </div>
+            <div>
+                <h2>Legal</h2>
+                <p>Cookies Policy</p>
+                <p>Privacy Policy</p>
+                <p>Terms of Service</p>
+
+            </div>
+            <div>
+                <h2>Install App</h2>
+                <img src="../../Assignment/Module-2-CSS/image/getgoogleblack.png" alt="">
+                <img src="../../Assignment/Module-2-CSS/image/appleblkac.png" alt="">
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
