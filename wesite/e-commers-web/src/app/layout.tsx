@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ProductProvider } from "@/context/ProductContext";
-import { CartProvider } from "@/context/CartContext";
-import ConditionalNavbar from "@/Components/ConditionalNavbar";
-import Footer from "@/Components/Footer";
+import { SessionProvider } from "next-auth/react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,17 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <CartProvider>
-          <ProductProvider>
-            <ConditionalNavbar />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </ProductProvider>
-        </CartProvider>
+        <Navbar />
+        <main className="flex-1 pt-16">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
